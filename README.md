@@ -14,4 +14,5 @@
 - 3주차 움짤 검색기 만들기
     - Keywords: `async await` `fetch` `API`
 - 4주차
+    - Keywords: `컴포넌트간의 역할과 책임 나누기` `느슨한 결합도 유지하기` `비동기 제어` `ajax`
 - 5주차
