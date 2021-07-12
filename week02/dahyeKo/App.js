@@ -7,7 +7,6 @@ function App({ $target, initialState }) {
     const todoInput = new TodoInput({
       $app: this.$app,
       onAddTodo: (text) => {
-          console.log(this.state)
         this.setState([
           ...this.state,
           {
