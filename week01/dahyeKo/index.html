@@ -7,9 +7,11 @@
     <title>Mission 1</title>
 </head>
 <body>
-    <div id="todo-list"></div>
+    <div id="todo-list1"></div>
+    <div id="todo-list2"></div>
+    <div id="todo-list3"></div>
     <script>
-        const data = [
+        const data1 = [
             {
                 text: 'JS 공부하기',
                 isCompleted: true,
@@ -20,9 +22,34 @@
             },
         ]
 
+        const data2 = [
+            {
+                text: '명상하기',
+                isCompleted: true,
+            },
+            {
+                text: '산책하기',
+                isCompleted: false,
+            },
+        ]
 
-        function TodoList($app, initialState) {            
+        const data3 = [
+            {
+                text: '넷플릭스 보기',
+                isCompleted: true,
+            },
+            {
+                text: '따릉이 타기',
+                isCompleted: false,
+            },
+        ]
+
+
+        function TodoList(selector, initialState) {            
             this.data = initialState
+            this.selector = selector
+            this.app = document.querySelector(this.selector) 
+
             if (!new.target) {
                 throw new Error("new 연산자와 함께 호출해야 한다")
             }
@@ -32,6 +59,7 @@
             if (!Array.isArray(this.data)) {
                 throw new Error("주어진 데이터가 배열이 아니다")
             }
+            
             this.data.forEach(todoItem => {
                 const keys = Object.keys(todoItem)
                 if(!keys.includes('text') || !keys.includes('isCompleted')) {
@@ -44,14 +72,18 @@
                     return `<li>${todoItem.text}</li>`
                 }).join('')
 
-                $app.innerHTML = `<ul>${itemStr}</ul>`
+                this.app.innerHTML = `<ul>${itemStr}</ul>`
             }
         }
         
         try {
-            const $app = document.querySelector('#todo-list')
-            const todoList = new TodoList($app, data)
-            todoList.render()
+            const todoList1 = new TodoList('#todo-list1', data1)
+            const todoList2 = new TodoList('#todo-list2', data2)
+            const todoList3 = new TodoList('#todo-list3', data3)
+            
+            todoList1.render()
+            todoList2.render()
+            todoList3.render()
         } catch (e) {
             alert(e.message)
         }
