@@ -7,9 +7,10 @@
 
 ### 학습내용
 
-- [1주차](./week01/index.md) TodoList 컴포넌트 작성
-    - Keywords: `new 생성자`
-- [2주차](./week02/index.md) TodoApp 업그레이드하기
-- [3주차](./week03/index.md) 움짤 검색기 만들기
-- [4주차](./week04/index.md) 
-- [5주차](./week05/index.md)
+- 1주차 TodoList 컴포넌트 작성
+    - Keywords: `new 생성자` `throw new Error` `생성자 함수` `this`
+- 2주차 TodoApp 업그레이드하기
+    - Keywords: `Event delegation` `CustomEvent` `component`
+- 3주차 움짤 검색기 만들기
+- 4주차
+- 5주차
