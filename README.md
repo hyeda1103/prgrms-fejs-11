@@ -12,5 +12,6 @@
 - 2주차 TodoApp 업그레이드하기
     - Keywords: `Event delegation` `CustomEvent` `component`
 - 3주차 움짤 검색기 만들기
+    - Keywords: `async await` `fetch`
 - 4주차
 - 5주차
